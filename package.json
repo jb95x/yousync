@@ -1,0 +1,19 @@
+{
+  "name": "yousync",
+  "version": "1.0.0",
+  "description": "Sync Youtube Videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João Branco",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "insane": "^2.6.2",
+    "md5": "*",
+    "socket.io": "*",
+    "youtube-info": "*",
+    "youtube-playlist": "*"
+  }
+}

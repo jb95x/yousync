@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>▶️ YouSync 🔄</title>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="main">
+      <div id="player"></div>
+      <div id="controls">
+        <div id="label">
+          <a id="playButton" onClick="onClickPlayButton()"></a>
+        </div>
+        <div id="timedisplay"></div>
+        <div id="playerslidercontainer">
+          <input type="range" min="0" max="36000" value="50" class="slider" id="playerslider"
+            onmousedown="playerSliderDown()" onmouseup="playerSliderUp()" oninput="playerSliderInput()">
+        </div>
+        <div id="label">
+          <a id="volumeButton" onClick="onClickVolumeButton()"></a>
+        </div>
+        <div id="volumeslidercontainer">
+          <input type="range" min="0" max="100" value="50" class="slider" id="volumeslider" onmouseup="changeVolume()">
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div id="title-area">
+        <center>
+          <b>
+            <h1 id="title">▶️ YouSync 🔄</h1>
+            <h6 id="pingviewer">You're not my friend. You're my brother my friend!</h6>
+          </b>
+          <h6 id="pingviewer"></h6>
+        </center>
+      </div>
+      <div id="textbox-area">
+        <br>
+        <h2>Welcome to YouSync !</h2><br>
+        <br>
+        The purpose of this system is to sync youtube videos with your peers without the need to count down on voice
+        chat.<br>
+        <ul>
+          <li>Start by identifying yourself by typing "setname (your desired username)" otherwise a random generated
+            name will be used</li><br>
+          <li>You can just join a room or create one by typing "room (room name) (room password)"</li><br>
+          <li>To cue a video type "play (video URL)"</li><br>
+          <li>To access the video cue type "list"</li><br>
+          <li>To remove a video from the list type "remove (video index on list)"</li><br>
+          <li>To skip a video type "skip"</li><br>
+          <li>To exit a room type "exit"</li><br>
+        </ul>
+        Every basic control on the player should sync like pause, play and seek (i hope) but audio volume won't sync so
+        your hears dont get blasted with earrape songs.<br>
+        <br>
+      </div>
+      <div id="inputbox-area">
+        <input id="inputBox" type="text" placeholder="Type a command...">
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/randomVideos.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
